@@ -25,7 +25,7 @@ export const aboutPage = {
   },
   content: `<section class="intro" aria-labelledby="intro-heading">
   <h1 id="intro-heading" class="intro-statement">
-    Software engineer working on notebooks, computational tools, and machine learning systems.
+    Software engineer working on computational notebooks at Datadog. Currently interested in formal verification, algorithms, and ML systems.
   </h1>
   <div class="section-body prose intro__body">
     <p>
