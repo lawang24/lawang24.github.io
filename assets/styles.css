@@ -221,11 +221,15 @@ h1 {
 .intro-statement {
   max-width: none;
   margin-bottom: 0.65rem;
-  color: var(--muted);
+  color: var(--text);
   font-size: 1.05rem;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.65;
+}
+
+.intro__body {
+  color: var(--muted);
 }
 
 .intro__body p:last-child {

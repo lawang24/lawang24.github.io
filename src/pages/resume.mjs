@@ -9,7 +9,7 @@ export const resumePage = {
   mainClass: "page-shell resume-page",
   content: `${renderPageHeading({
     title: "Resume",
-    lede: "Experience, education, and technical skills.",
+    lede: "Where I've been.",
   })}
 
 <section class="section-grid" aria-labelledby="experience-heading">
@@ -77,7 +77,7 @@ export const resumePage = {
         <h3>BA, Economics &amp; Computer Science</h3>
         <p class="resume-item__organization">Princeton University · 3.8/4.0</p>
       </div>
-      <p class="resume-item__date meta">2025 · Princeton, NJ</p>
+      <p class="resume-item__date meta">2025</p>
     </header>
   </article>
 </section>
