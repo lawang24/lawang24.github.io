@@ -1,0 +1,10 @@
+{
+  "name": "lawrence-wang-personal-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "dev": "node scripts/dev.mjs"
+  }
+}
