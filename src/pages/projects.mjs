@@ -5,7 +5,7 @@ export const projectsPage = {
   path: "/projects/",
   title: "Projects — Lawrence Wang",
   description:
-    "Selected systems engineering and machine learning infrastructure projects.",
+    "Selected software engineering, notebooks, and machine learning systems projects by Lawrence Wang.",
   mainClass: "page-shell page-shell--listing",
   content: `${renderPageHeading({
     title: "Projects",
@@ -16,7 +16,7 @@ export const projectsPage = {
   <h2 id="projects-heading" class="visually-hidden">Selected projects</h2>
   <ol class="entry-list project-list">
     <li class="entry">
-      <a class="project-link" href="https://github.com/your-handle/lichess-woodpecker">
+      <a class="project-link" href="https://github.com/lawang24/lichess-woodpecker">
         <article class="entry__body">
           <h3>lichess-woodpecker</h3>
           <p>A full-stack chess training app for practicing puzzles through repeated cycles.</p>

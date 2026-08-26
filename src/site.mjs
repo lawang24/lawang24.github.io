@@ -1,7 +1,10 @@
 export const site = {
   name: "Lawrence Wang",
+  url: "https://lawang24.github.io",
   stylesheet: "/assets/styles.css",
   script: "/assets/site.js",
+  github: "https://github.com/lawang24",
+  linkedin: "https://www.linkedin.com/in/lawang24",
 };
 
 export const navigation = [

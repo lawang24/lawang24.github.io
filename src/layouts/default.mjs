@@ -17,12 +17,19 @@ export const renderPage = ({
   path,
   title,
   description,
+  structuredData,
+  indexable = true,
   mainClass = "page-shell",
   content,
 }) => {
+  const canonicalUrl = new URL(path, `${site.url}/`).href;
   const descriptionTags = description
     ? `<meta name="description" content="${escapeAttribute(description)}">
-<meta property="og:description" content="${escapeAttribute(description)}">`
+<meta property="og:description" content="${escapeAttribute(description)}">
+<meta name="twitter:description" content="${escapeAttribute(description)}">`
+    : "";
+  const structuredDataTag = structuredData
+    ? `<script type="application/ld+json">${JSON.stringify(structuredData).replaceAll("<", "\\u003c")}</script>`
     : "";
 
   return `<!doctype html>
@@ -32,10 +39,16 @@ export const renderPage = ({
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-${descriptionTags ? `${indent(descriptionTags, 4)}\n` : ""}    <meta property="og:type" content="website">
+    <meta name="author" content="${escapeAttribute(site.name)}">
+${descriptionTags ? `${indent(descriptionTags, 4)}\n` : ""}${indexable ? "" : "    <meta name=\"robots\" content=\"noindex,follow\">\n"}    <link rel="canonical" href="${escapeAttribute(canonicalUrl)}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="${escapeAttribute(site.name)}">
     <meta property="og:title" content="${escapeAttribute(title)}">
+    <meta property="og:url" content="${escapeAttribute(canonicalUrl)}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="${escapeAttribute(title)}">
     <title>${escapeAttribute(title)}</title>
-${indent(themeBootstrap, 4)}
+${structuredDataTag ? `${indent(structuredDataTag, 4)}\n` : ""}${indent(themeBootstrap, 4)}
     <link rel="stylesheet" href="${site.stylesheet}">
     <script src="${site.script}" defer></script>
   </head>

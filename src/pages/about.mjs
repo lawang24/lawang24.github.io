@@ -1,10 +1,28 @@
+import { site } from "../site.mjs";
+
 export const aboutPage = {
   outputPath: "index.html",
   path: "/",
-  title: "Lawrence Wang — Software Engineer",
+  title: "Lawrence Wang — Software Engineer | Notebooks & ML Systems",
   mainClass: "page-shell page-shell--home",
   description:
-    "Systems engineer working on reliable infrastructure for machine learning.",
+    "Lawrence Wang is a New York City software engineer building notebooks, computational tools, and machine learning systems.",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: `${site.url}/`,
+    mainEntity: {
+      "@type": "Person",
+      name: site.name,
+      url: `${site.url}/`,
+      jobTitle: "Software Engineer",
+      sameAs: [site.github, site.linkedin],
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Princeton University",
+      },
+    },
+  },
   content: `<section class="intro" aria-labelledby="intro-heading">
   <h1 id="intro-heading" class="intro-statement">
     Software engineer working on notebooks, computational tools, and machine learning systems.
@@ -13,8 +31,8 @@ export const aboutPage = {
     <p>
       New York City, NY ·
       <a href="mailto:lawrence.wang24@gmail.com">email</a> ·
-      <a href="https://www.linkedin.com/in/lawang24">linkedin</a> ·
-      <a href="https://github.com/lawang24">github</a>
+      <a href="${site.linkedin}">linkedin</a> ·
+      <a href="${site.github}">github</a>
     </p>
   </div>
 </section>`,
