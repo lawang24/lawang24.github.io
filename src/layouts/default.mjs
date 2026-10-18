@@ -2,6 +2,15 @@ import { renderSiteHeader } from "../components/site-header.mjs";
 import { escapeAttribute, indent } from "../lib/html.mjs";
 import { site } from "../site.mjs";
 
+const analyticsTag = `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HQ3HT02XW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6HQ3HT02XW');
+</script>`;
+
 const themeBootstrap = `<script>
   document.documentElement.classList.add("js");
   try {
@@ -37,6 +46,7 @@ export const renderPage = ({
 <html lang="en">
   <head>
     <meta charset="utf-8">
+${indent(analyticsTag, 4)}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="author" content="${escapeAttribute(site.name)}">
