@@ -37,7 +37,7 @@ export const resumePage = {
         <p class="resume-item__date meta">Sep – Dec 2024</p>
       </header>
       <p class="resume-item__summary">
-        Making large-scale recommendation model training faster and more flexible.
+        Optimizing large-scale graph neural network and adding customizable neighborhood sampling
       </p>
     </article>
 
