@@ -8,8 +8,8 @@ export const resumePage = {
     "Lawrence Wang's software engineering experience, education, and technical skills.",
   mainClass: "page-shell resume-page",
   content: `${renderPageHeading({
-    title: "Resume",
-    lede: "Where I've been.",
+    title: "resume",
+    lede: "paying the bills",
   })}
 
 <section class="section-grid" aria-labelledby="experience-heading">

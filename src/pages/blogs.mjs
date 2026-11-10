@@ -9,7 +9,7 @@ export const blogsPage = {
   description:
     "Technical writing by Lawrence Wang on software engineering, notebooks, computational tools, and machine learning systems.",
   mainClass: "page-shell page-shell--listing",
-  content: `${renderPageHeading({ title: "Blogs", lede: "Thoughts on software and engineering." })}
+  content: `${renderPageHeading({ title: "blogs", lede: "some thoughts" })}
 
 <section aria-labelledby="posts-heading">
   <h2 id="posts-heading" class="visually-hidden">Latest posts</h2>

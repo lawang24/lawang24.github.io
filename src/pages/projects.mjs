@@ -8,8 +8,8 @@ export const projectsPage = {
     "Selected software engineering, notebooks, and machine learning systems projects by Lawrence Wang.",
   mainClass: "page-shell page-shell--listing",
   content: `${renderPageHeading({
-    title: "Projects",
-    lede: "A few things I've made.",
+    title: "projects",
+    lede: "for fun",
   })}
 
 <section aria-labelledby="projects-heading">
