@@ -98,6 +98,7 @@ a:hover {
 
 .wordmark {
   margin-right: auto;
+  font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -259,10 +260,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.page-shell--post {
-  max-width: 42rem;
-}
-
 .post-heading {
   margin-bottom: 2.5rem;
 }
@@ -272,8 +269,8 @@ h1 {
 }
 
 .post-body {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
+  line-height: 1.7;
 }
 
 .post-body p {
