@@ -75,7 +75,7 @@ export const resumePage = {
     <header class="resume-item__header">
       <div>
         <h3>BA, Economics &amp; Computer Science</h3>
-        <p class="resume-item__organization">Princeton University · 3.8/4.0</p>
+        <p class="resume-item__organization">Princeton University</p>
       </div>
       <p class="resume-item__date meta">2025</p>
     </header>
