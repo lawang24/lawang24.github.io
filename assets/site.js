@@ -52,3 +52,21 @@
 
   updateToggle();
 })();
+
+(async () => {
+  const label = document.querySelector("[data-github-stars]");
+  if (!label) return;
+
+  try {
+    const response = await fetch(`https://api.github.com/repos/${label.dataset.githubStars}`);
+    if (!response.ok) return;
+
+    const { stargazers_count: stars } = await response.json();
+    if (!Number.isSafeInteger(stars) || stars < 0) return;
+
+    label.querySelector(".entry__star-count").textContent = stars.toLocaleString();
+    label.hidden = false;
+  } catch {
+    // Leave the optional count hidden when GitHub is unavailable.
+  }
+})();
